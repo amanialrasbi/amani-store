@@ -30,9 +30,9 @@
 body{background:var(--W);color:var(--TX);direction:rtl;}
 
 /* ╠════ NAV ╠════ */
-.nav-bar{background:rgba(255,255,255,.97);border-bottom:1px solid var(--BD);padding:0 40px;
+.nav-bar{background:rgba(255,255,255,.97);border-bottom:3px solid var(--G);padding:0 32px;
   display:flex;align-items:center;justify-content:space-between;height:60px;
-  box-shadow:0 1px 10px rgba(94,36,97,.06);position:sticky;top:0;z-index:900;}
+  box-shadow:0 2px 12px rgba(94,36,97,.09);position:sticky;top:0;z-index:900;}
 nav{display:flex;align-items:center;gap:4px;}
 nav a{color:var(--TX);text-decoration:none;font-weight:700;font-size:.92rem;padding:7px 16px;border-radius:8px;transition:all .22s;}
 nav a:hover,nav a.active{background:var(--LBG);color:var(--P);}
@@ -329,6 +329,11 @@ footer::before{content:"";position:absolute;inset:0;
 ::-webkit-scrollbar-track{background:var(--W);}
 ::-webkit-scrollbar-thumb{background:var(--P);border-radius:3px;}
 ::selection{background:var(--G);color:var(--PD);}
+
+/* ╠═ SITE HEADER ═╠ */
+.site-header{background:#fff;width:100%;overflow:hidden;position:relative;line-height:0;}
+.site-header img{width:100%;height:auto;display:block;max-height:260px;object-fit:cover;object-position:center;}
+@media(max-width:768px){.site-header img{max-height:130px;}}
 </style>
 </head>
 <body>
@@ -338,12 +343,18 @@ footer::before{content:"";position:absolute;inset:0;
 ════════════════════════════════════════════ -->
 <div id="store-view">
 
-  <!-- ── NAV ── -->
+  <!-- ── SITE HEADER ── -->
+  <div class="site-header">
+    <img src="logo.svg" alt="أماني الراسبية — لإنتاج المحتوى الرقمي">
+  </div>
+
+    <!-- ── NAV ── -->
   <header class="nav-bar">
     <nav>
       <a href="#" class="active">الرئيسية</a>
       <a href="#products-section">المنتجات</a>
       <a href="#cats-section">التصنيفات</a>
+      <a href="#about-section">عن المتجر</a>
       <a href="#footer">تواصل معنا</a>
     </nav>
     <div class="nav-right">
